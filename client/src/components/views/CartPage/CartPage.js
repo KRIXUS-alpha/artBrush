@@ -8,7 +8,7 @@ import {
 import UserCardBlock from './Sections/UserCardBlock';
 import { Result, Empty } from 'antd';
 import Axios from 'axios';
-import Paypal from '../../utils/Paypal';
+// import Paypal from '../../utils/Paypal';
 function CartPage(props) {
     const dispatch = useDispatch();
     const [Total, setTotal] = useState(0)
@@ -113,21 +113,7 @@ function CartPage(props) {
                 }
             </div>
 
-
-
-            {/* Paypal Button */}
-
-            {ShowTotal &&
-
-                <Paypal
-                    toPay={Total}
-                    onSuccess={transactionSuccess}
-                    transactionError={transactionError}
-                    transactionCanceled={transactionCanceled}
-                />
-
-            }
-
+      
 
 
         </div>
